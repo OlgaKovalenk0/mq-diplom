@@ -37,6 +37,7 @@ h1 {
   background-image: url("../images/banner-bg.jpg");
   background-color: #6d6c69;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   padding-top: 25px;
   color: #fff;
@@ -615,28 +616,32 @@ textarea {
 
 .burger-menu {
   display: none;
+  flex-direction: column;
+  gap: 20%;
   width: 24px;
   height: 24px;
 }
 
-@media (min-width: 641px) and (max-width: 1199px) {
+.burger-menu>div {
+  height: 20%;
+  background-color: #ffffff;
+}
+
+@media (max-width: 1199px) {
   .menu {
     display: none;
   }
 
   .burger-menu {
     display: flex;
-    flex-direction: column;
-    gap: 20%;
-  }
-
-  .burger-menu>div {
-    height: 20%;
-    background-color: #ffffff;
   }
 
   .container {
     padding: 0 30px;
+  }
+
+  .header {
+    background-image: url("../images/banner-bg-tablet.jpg");
   }
 
   .product {
@@ -685,6 +690,28 @@ textarea {
   .post-trend .post-name {
     font-size: 17px;
   }
+
+  .sidebar .section-header,
+  .main-section-header,
+  .popup-header {
+    margin-top: 50px;
+  }
+
+  .news>.post:not(:last-child) {
+    margin: 50px 0;
+  }
+
+  .sidebar section {
+    margin: 50px 0;
+  }
+
+  .footer .social {
+    margin: 0 0 50px 0;
+  }
+
+  .footer {
+    margin: 0 30px 35px;
+  }
 }
 
 @media (orientation: landscape) and (min-width: 641px) and (max-width: 1199px) {
@@ -695,5 +722,110 @@ textarea {
   .post-trend {
     max-width: 25%;
     min-width: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    background-image: url("../images/banner-mobile.jpg");
+  }
+
+  .container {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 160px;
+  }
+
+  .logo {
+    width: 90%;
+    margin: 0 5%;
+  }
+
+  .sidebar .section-header,
+  .main-section-header,
+  .popup-header {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+
+  .title {
+    padding: 40px 40px 210px;
+    font-size: 26px;
+  }
+
+  .main {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .news>.post:not(:last-child) {
+    margin: 45px 0;
+  }
+
+  .news>.post .post-name {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .news>.post .post-date-author {
+    margin-bottom: 20px;
+  }
+
+  .news>.post .post-text,
+  .product .post-text {
+    font-size: 14px;
+  }
+
+  .news .post-content {
+    padding-bottom: 5px;
+  }
+
+  .sidebar section {
+    margin: 40px 0;
+  }
+
+  .sidebar section:last-child {
+    margin: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin: 0;
+  }
+
+  .new-posts .post-content {
+    width: auto;
+  }
+
+  .products {
+    margin-bottom: 10px;
+  }
+
+  .product {
+    width: 100%;
+  }
+
+  .footer .social {
+    margin: 0 15px 40px;
+  }
+
+  .footer {
+    margin-bottom: 40px;
+  }
+
+  .popup {
+    width: auto;
+    margin: 0 15px;
+  }
+
+  .popup-form {
+    margin: 0 25px 30px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 640px) {
+  .post-trend {
+    min-width: 100%;
   }
 }
