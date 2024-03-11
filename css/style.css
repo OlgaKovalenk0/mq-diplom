@@ -26,7 +26,7 @@ ul {
   margin: 0;
 }
 
-h6,
+h3,
 h2,
 h1 {
   margin: 0;
@@ -460,8 +460,10 @@ textarea:focus {
   margin: 5px 0 20px;
 }
 
-.product>img {
+.product img {
+  width: 100%;
   margin-bottom: -10px;
+  display: block;
 }
 
 .product .post-name {
@@ -807,11 +809,11 @@ textarea {
   }
 
   .footer .social {
-    margin: 0 15px 40px;
+    margin: 0 0 40px;
   }
 
   .footer {
-    margin-bottom: 40px;
+    margin: 0 15px 40px;
   }
 
   .popup {
